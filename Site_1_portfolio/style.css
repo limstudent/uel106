@@ -1,0 +1,159 @@
+/* --- FORMAT A4 --- */
+@page {
+    size: A4;
+    margin: 20mm;
+}
+
+header {
+    text-decoration: none;
+    padding: 0px 5px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3rem;
+}
+
+header nav ul {
+    list-style: none;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 20px;
+    size: 1rem;
+}
+li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+nav ul li a:hover {
+    display: inline-block;
+    text-decoration: overline wavy #192A53;
+    color: #2f2f30;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 20px 0px 20px 0px;
+    background: #000; 
+}
+
+.color {
+    color: white;
+}
+
+.container {
+    width: 210mm;
+    min-height: 297mm;
+    margin: auto;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+/* --- COLONNE GAUCHE --- */
+.left {
+    background: #192A53;
+    padding: 20mm 10mm;
+    border-right: 3px solid #0b0b0b;
+    color: #D4D5CD;
+}
+
+.name {
+    font-size: 22pt;
+    font-weight: bold;
+    margin: 0;
+}
+
+.job {
+    font-size: 12pt;
+    margin-top: 5px;
+}
+
+.left section {
+    margin-top: 15mm;
+}
+
+.left h3 {
+    font-size: 11pt;
+    text-transform: uppercase;
+    border-bottom: 2px solid #000;
+    padding-bottom: 3px;
+}
+
+.left ul {
+    padding-left: 15px;
+    font-size: 10pt;
+}
+
+/* --- COLONNE DROITE --- */
+.right {
+    padding: 20mm;
+}
+
+.right h3 {
+    font-size: 13pt;
+    text-transform: uppercase;
+    border-bottom: 3px solid #000;
+    padding-bottom: 4px;
+}
+
+.link a{
+    text-decoration: none;
+    color: #b76742;
+}
+
+.link a:hover{
+    text-decoration: overline wavy #192A53;
+    color: #2f2f30;
+}
+.exp {
+    margin-bottom: 10mm;
+}
+
+.exp h4 {
+    font-size: 11pt;
+    margin: 0;
+}
+
+.date {
+    font-size: 10pt;
+    color: #555;
+}
+
+.right ul {
+    padding-left: 15px;
+    font-size: 10pt;
+}
+
+/* --- FOOTER --- */
+footer {
+    width: auto;
+    margin: 10mm auto 0 auto;
+    background: white;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 11pt;
+}
+
+#meteo {
+    margin-top: 5px;
+}
+
+/* --- MODE IMPRESSION --- */
+@media print {
+    body {
+        background: white;
+    }
+    .container {
+        box-shadow: none;
+        margin: 0;
+        width: auto;
+        min-height: auto;
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+}
