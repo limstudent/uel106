@@ -1,0 +1,379 @@
+/* éléments généraux de la page */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F6EEE6;
+  font-family: Roboto, sans-serif;
+  line-height: 1.6;
+  color: #4D0405;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Conteneur parent au centre */
+.parent header {
+  position: relative;
+  max-width: 40%;
+  min-height: 10vh;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* child centré horizontalement */
+.child {
+  max-width: 1000px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(62, 111, 132, 0.3);
+  position: relative;
+}
+
+/* Navigation principale */
+.navigation_haut {
+  width: 100%;
+  background-color: rgba(77, 4, 5, 0.8);
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  padding: 0 10px;
+  margin: 0;
+  gap: 15px;
+}
+
+.main-nav ul li a {
+  color: #D69216;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 30px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.main-nav ul li a:hover {
+  background-color: #4D0405;
+  color: #3E6F84;
+}
+
+li {
+  text-align: center;
+}
+
+/* listes ordonnées */
+ol li {
+  list-style: decimal;
+  margin: 0 15px;
+  list-style-position: inside;
+  text-align: center;
+}
+
+/* Titres */
+#titre_1 {
+  color: #D69216;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  margin: 20px 50px;
+}
+
+.marge_titre1,
+.marge_titre2 {
+  margin: 20px 50px;
+  line-height: 1;
+}
+
+.titre_2 {
+  color: #4D0405;
+  font-family: 'Libertinus Sans', serif;
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+}
+
+/* Paragraphes */
+.paragraphes_principaux {
+  color: #4D0405;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  margin: 20px 40px 20px 10px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Tableaux */
+table {
+  background-color: #4D0405;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  width: calc(100% - 100px);
+  margin: 20px 50px;
+  border-collapse: collapse;
+  color: #fff;
+}
+
+table, td, th {
+  border: 3px solid #D69216;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Zone de navigation entre articles */
+aside a {
+  text-align: right;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+  display: block;
+  background-color: #4D0405;
+  border-radius: 30px;
+  margin: 0 15px;
+}
+
+/* surbrillance liens */
+a:hover {
+  color: #3E6F84;
+}
+
+/* mise en place images et textes (version générique) */
+.bloc-texte-image {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin: 20px 10px 1.5rem;
+}
+
+/* paragraphe dans le bloc */
+.bloc-texte-image .paragraphes_principaux {
+  flex: 1.5;
+  margin: 0;
+}
+
+/* figure à côté du texte */
+.bloc-texte-image .image1 {
+  flex: 1.2;
+  margin: 0;
+}
+
+.bloc-texte-image .image1 img {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.bloc-texte-image .image1 figcaption {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+/* ----- Pied de page ----- */
+
+footer#bottom {
+  background: #4D0405;
+  color: #F6EEE6;
+  padding: 25px 20px;
+  margin-top: 40px;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
+  font-size: 0.95rem;
+}
+
+/* navigation du footer */
+footer#bottom nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+footer#bottom nav li {
+  text-align: center;
+}
+
+footer#bottom nav a {
+  color: #D69216;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 999px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+footer#bottom nav a:hover {
+  background-color: #F6EEE6;
+  color: #4D0405;
+}
+
+/* texte & adresse du footer */
+footer#bottom section {
+  text-align: center;
+}
+
+footer#bottom small {
+  display: block;
+  margin-bottom: 6px;
+}
+
+footer#bottom a {
+  color: #D69216;
+}
+
+footer#bottom a:hover {
+  color: #3E6F84;
+}
+
+footer#bottom address {
+  font-style: normal;
+  opacity: 0.9;
+}
+
+
+/* Conteneur vidéo centré et responsive */
+.video-wrapper {
+  margin: 30px auto;
+  max-width: 800px;        /* largeur max de la vidéo */
+  width: 100%;
+}
+
+/* Vidéo fluide dans son conteneur */
+.video-wrapper video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+  border: 3px solid #D69216;
+}
+
+/* légende sous la vidéo */
+.video-caption {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 8px;
+  color: #4D0405;
+}
+
+/* Conteneur général de la vidéo */
+.video-wrapper {
+  margin: 30px auto;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Iframe plein cadre dans son conteneur */
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Légende sous la vidéo */
+.video-caption {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 8px;
+  color: #4D0405;
+}
+
+/* Zonne RESPONSIVE */
+
+@media (max-width: 900px) {
+  body {
+    padding: 10px;
+  }
+
+  .child {
+    padding: 15px;
+  }
+
+  .marge_titre1,
+  .marge_titre2 {
+    margin: 15px 20px;
+  }
+
+  #titre_1 {
+    margin: 15px 20px;
+  }
+
+  .paragraphes_principaux {
+    margin: 15px 15px;
+  }
+
+  table {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  .bloc-texte-image {
+    flex-direction: column;
+  }
+
+  .bloc-texte-image .image1 {
+    align-self: center;
+    max-width: 90%;
+  }
+
+  .navigation_haut {
+    border-radius: 20px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  aside a {
+    margin: 10px 0;
+  }
+}
+
+/* footer */
+@media (max-width: 700px) {
+  footer#bottom {
+    padding: 20px 15px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  footer#bottom nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Conteneur responsive au ratio 16:9 */
+.video-responsive {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;   /* 16/9 = 56.25% */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+  border: 3px solid #D69216;
+}
